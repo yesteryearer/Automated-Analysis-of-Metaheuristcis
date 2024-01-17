@@ -1,0 +1,139 @@
+.search-container {
+    font-family: 'Roboto', sans-serif;
+    max-width: 95%;
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--background-color-two);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-container h1 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    position: relative;
+}
+
+.search-container h1::before, .search-container h1::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 6%;
+    bottom: -10px;
+    background: var(--text-color);
+    transition: width 0.3s ease;
+}
+
+.search-container h1::before {
+    right: 50%;
+}
+
+.search-container h1::after {
+    left: 50%;
+}
+
+.search-container h1:hover {
+    color: var(--hover-text-color);
+}
+
+.search-container h1:hover::before, .search-container h1:hover::after {
+    width: 0%;
+}
+
+.search-container .search-bar {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.search-container .search-bar input[type="text"] {
+    flex-grow: 1;
+    padding: 15px;
+    font-size: 18px;
+    margin-right: 10px;
+    background-color: var(--background-color-three);
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.search-container .search-bar .search-button {
+    padding: 15px 20px;
+    font-size: 18px;
+    background-color: var(--background-color-one);
+    color: var(--text-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.search-container .search-bar input[type="text"]:focus {
+    box-shadow: 0 0 5px var(--highlight-color);
+}
+
+.search-container .search-bar .search-button:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.05);
+}
+
+.search-container .results-logger-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.search-container .results-logger-container .results-table {
+    flex-grow: 2;
+}
+
+.search-container .results-logger-container .logger {
+    flex-grow: 1;
+    margin-left: 1em;
+}
+
+.results-logger-container button {
+    padding: 5px 10px;
+    background-color: var(--background-color-one);
+    color: var(--text-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.results-logger-container button:hover {
+    background-color: var(--hover-color);
+}
+
+.results-logger-container .button {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat; 
+    background-position: center;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.results-logger-container .remove-button {
+    background-image: var(--minus-icon);
+}
+
+.results-logger-container .add-button {
+    background-image: var(--plus-icon);
+}
+
+  

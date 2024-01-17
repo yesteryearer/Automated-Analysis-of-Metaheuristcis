@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.light-theme {
+  --background-color-one: rgba(91, 91, 91, 0.083);
+  --background-color-two: rgba(197, 197, 197, 0.293);
+  --background-color-three: white;
+  --hover-color: rgba(180, 179, 179, 0.421);
+  --hover-text-color: var(--hover-color);
+  --text-color: black;
+  --text-color-active: rgb(44, 44, 44);
+  --theme-icon: url('../../public/images/icons/light-icon.png');
+  --plus-icon: url('../../public/images/icons/plus-icon-light.png');
+  --minus-icon: url('../../public/images/icons/minus-icon-light.png');
+  --radio-button-checked: url('../../public/images/buttons/radio-button-light-checked.png');
+  --radio-button-unchecked: url('../../public/images/buttons/radio-button-light-unchecked.png');
+  
+}
+
+.dark-theme {
+  --background-color-one: rgb(42, 41, 41);
+  --background-color-two: rgb(63, 63, 63);
+  --background-color-three: rgb(74, 74, 74);
+  --hover-color: rgba(130, 128, 128, 0.421);
+  --hover-text-color: var(--hover-color);
+  --text-color-active: rgb(175, 175, 175);
+  --text-color: white;
+  --theme-icon: url('../../public/images/icons/dark-icon.png');
+  --plus-icon: url('../../public/images/icons/plus-icon-dark.png');
+  --minus-icon: url('../../public/images/icons/minus-icon-dark.png');
+  --radio-button-checked: url('../../public/images/buttons/radio-button-dark-checked.png');
+  --radio-button-unchecked: url('../../public/images/buttons/radio-button-dark-unchecked.png');
+}
+
+
+

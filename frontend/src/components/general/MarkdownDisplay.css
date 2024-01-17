@@ -1,0 +1,70 @@
+.markdown-display {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 100%;
+    color: var(--text-color);
+    padding: 20px;
+    background-color: var(--background-color-three);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+  }
+
+.markdown-display h1 {
+    font-size: 28px;
+    color: var(--text-color);
+}
+
+.markdown-display h2 {
+    font-size: 24px;
+    color: var(--text-color);
+}
+
+.markdown-display h3 {
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.markdown-display p {
+    margin-bottom: 1em;
+}
+
+.markdown-display a {
+    color: #3182ce;
+    text-decoration: none;
+}
+  
+.markdown-display a:hover {
+    text-decoration: underline;
+}
+
+.markdown-display ul,
+.markdown-display ol {
+  margin-left: 20px;
+  padding-left: 0;
+}
+
+.markdown-display li {
+  margin-bottom: 0.5em;
+}
+
+.markdown-display code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--background-color-two);
+    padding: 2px 4px;
+    border-radius: 4px;
+  }
+  
+.markdown-display pre {
+    background-color: var(--background-color-two);
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+  
+.markdown-display strong {
+  text-decoration: underline;
+}
+
+  

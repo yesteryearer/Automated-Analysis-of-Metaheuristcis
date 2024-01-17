@@ -1,0 +1,46 @@
+version: '2.1'
+services:
+  frontend:
+    build: 
+      context: ./frontend
+      args:
+        REACT_APP_API_ENDPOINT: ${REACT_APP_API_ENDPOINT}
+        DOCKER_FRONTEND_PORT: ${DOCKER_FRONTEND_PORT}
+    ports:
+      - "${DOCKER_FRONTEND_PORT}:${DOCKER_FRONTEND_PORT}"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    environment:
+      - REACT_APP_API_ENDPOINT=${REACT_APP_API_ENDPOINT}
+
+  backend:
+    build: 
+      context: ./backend
+      args:
+        DOCKER_BACKEND_PORT: ${DOCKER_BACKEND_PORT}
+        POSTGRES_HOST: ${POSTGRES_HOST}
+        POSTGRES_DB: ${POSTGRES_DB}
+        POSTGRES_USER: ${POSTGRES_USER}
+        POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "${DOCKER_BACKEND_PORT}:${DOCKER_BACKEND_PORT}"
+    volumes:
+      - ./backend:/app
+
+  db:
+    image: postgres:13
+    restart: always
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    volumes: 
+      - ./database/data:/var/lib/postgresql/data
+      - ./database/init:/docker-entrypoint-initdb.d/
+    ports:
+      - "${POSTGRES_PORT}:${POSTGRES_PORT}"
+
+

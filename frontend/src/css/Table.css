@@ -1,0 +1,38 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+th,
+td {
+    border: 1px solid var(--text-color);
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: var(--background-color-two);
+}
+
+caption {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.borderless {
+    border: none;
+}
+
+.title-cell {
+    background-color: var(--background-color-one);
+}
+
+.value-cell {
+    background-color: var(--background-color-three);
+    min-width: 100px;
+}

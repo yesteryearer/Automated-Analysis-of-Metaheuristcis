@@ -1,0 +1,143 @@
+.navbar {
+    position: fixed;
+    height: 100%;
+    left: 0;
+    width: 200px;
+    background-color: var(--background-color-two);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; 
+    transition: background-color 0.3s ease;
+    justify-content: flex-start;
+    border-right: 1px solid var(--background-color-three);
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.navbar li {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.navbar a {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0; 
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    transition: color 0.3s ease; 
+    text-align: center;
+}
+
+.navbar a.active {
+    color: var(--text-color-active);
+}
+
+
+.navbar a::before, .navbar a::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 90%;
+    background: var(--text-color);
+    transition: width 0.3s ease;
+    left: 5%; 
+}
+
+.navbar a::before {
+    top: 0;
+}
+
+.navbar a::after {
+    bottom: 0;
+}
+
+.navbar a:hover {
+    color: var(--hover-text-color);
+}
+
+.navbar a:hover::before, .navbar a:hover::after {
+    width: 0%; 
+}
+
+.navbar h1 {
+    font-size: 1.2em; 
+}
+
+.navbar h1::before, .navbar h1::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%; 
+    bottom: -10px;
+    background: var(--text-color);
+    transition: width 0.3s ease;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar h1::before {
+    right: 0;
+}
+
+.navbar h1::after {
+    left: 0;
+}
+
+.navbar h1:hover {
+    color: var(--hover-text-color);
+}
+
+.navbar h1:hover::before, .navbar h1:hover::after {
+    width: 0%; 
+}
+
+.nav-link {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0; 
+    color: grey;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif; 
+    transition: color 0.3s ease; 
+    text-align: center;
+}
+
+.nav-link::before, .nav-link::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 90%; 
+    background: var(--text-color);
+    transition: width 0.3s ease;
+    left: 5%; 
+}
+
+.nav-link::before {
+    top: 0;
+}
+
+.nav-link::after {
+    bottom: 0;
+}
+
+.nav-link:hover {
+    color: var(--hover-text-color);
+}
+
+.nav-link:hover::before, .nav-link:hover::after {
+    width: 0%;
+}
+
+

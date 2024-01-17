@@ -1,0 +1,42 @@
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    padding-right: 1em;
+    margin: 1em auto;
+    transition: all 0.1s ease;
+}
+
+.results-table th,
+.results-table td {
+    border: 1px solid var(--text-color);
+    padding: 10px;
+    text-align: center;
+}
+
+.results-table th {
+    background-color: var(--background-color-two);
+    text-transform: uppercase;
+}
+
+.results-table caption {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.results-table tr:hover {
+    background-color: var(--hover-color);
+}
+
+.results-table .borderless {
+    border: none;
+}
+
+.results-table .title-cell {
+    background-color: var(--background-color-one);
+}
+
+.results-table .value-cell {
+    background-color: var(--background-color-three);
+}

@@ -1,0 +1,80 @@
+.App {
+  height: 100vh;
+  background-color: var(--background-color-one);
+  color: var(--text-color);
+  text-align: center;
+  display: flex;
+  flex-direction: row; 
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+}
+
+input, textarea, button, label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.05em;
+  background-color: var(--background-color-three);
+  color: var(--text-color);
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em; 
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  transition: color 0.3s ease;
+  position: relative;
+  width: 100%; 
+  text-align: center; 
+}
+
+h2 {
+  color: var(--text-color);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: color 0.3s ease;
+  font-size: 1.2em; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+  width: 100%; 
+  text-align: center; 
+}
+
+.content {
+  flex-grow: 1;
+  margin-left: 240px;
+  min-width: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+input[type='radio'] {
+  appearance: none;
+  margin: 10px 5px;
+}
+
+input[type='radio']:before {
+  content: '';
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-image: var(--radio-button-unchecked);
+  background-size: cover;
+  background-color: var(--background-color-three);
+  cursor: pointer;
+}
+
+input[type='radio']:checked:before {
+  background-image: var(--radio-button-checked);
+}

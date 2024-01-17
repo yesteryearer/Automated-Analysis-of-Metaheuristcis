@@ -1,0 +1,177 @@
+.analysis-pane-container {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 96%;
+    max-width: 96%;
+    border: 1px solid var(--text-color);
+    transition: all 0.6s ease;
+    background-color: var(--background-color-three);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 1em auto;
+    border-radius: 2px;
+    padding: 1em;
+    max-height: 600px;
+}
+
+.analysis-pane-container label,
+.analysis-pane-container .description-container label,
+.analysis-pane-container textarea,
+.analysis-pane-container .description-container textarea {
+    box-sizing: border-box;
+}
+
+label.label-radio-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
+}
+
+.analysis-pane-container.open {
+    margin-top: 1em;
+    max-width: 100%;
+    padding: 1em;
+}
+
+.analysis-pane-container.close {
+    padding:  1em;
+    max-width: 100%;
+}
+
+.mount {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.mount .button {
+    height: 24px;
+    width: 24px;
+    margin-bottom: 4.2px;
+    padding-right: 0.5em;
+}
+
+.analysis-pane-container .description-container,
+.analysis-pane-container .notes-container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.analysis-pane-container label,
+.analysis-pane-container .description-container label,
+.analysis-pane-container .notes-container label,
+.analysis-pane-container button,
+.analysis-pane-container input[type='radio'],
+.analysis-pane-container textarea,
+.analysis-pane-container .description-container textarea,
+.analysis-pane-container .notes-container textarea,
+.analysis-pane-container fieldset,
+.analysis-pane-container legend {
+    cursor: pointer;
+}
+
+.analysis-pane-container label,
+.analysis-pane-container button {
+    font-size: 1em;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: var(--background-color-two);
+    color: var(--text-color);
+    border-radius: 4px;
+    padding: 5px 0px;
+    text-align: center;
+}
+
+.analysis-pane-container button {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.analysis-pane-container .description-container label,
+.analysis-pane-container .notes-container label {
+    margin-bottom: 5px;
+}
+
+.analysis-pane-container label:hover,
+.analysis-pane-container button:hover {
+    background-color: var(--hover-color);
+}
+
+.analysis-pane-container button {
+    padding: 25px 40px;
+    transition: background-color 0.6s ease;
+    width: 200px;
+}
+
+.analysis-pane-container input[type='radio'] {
+    margin: 5px 5px;
+}
+
+
+.analysis-pane-container textarea,
+.analysis-pane-container .description-container textarea,
+.analysis-pane-container .notes-container textarea {
+    resize: none;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 1em;
+    color: var(--text-color);
+    background-color: var(--background-color-one);
+    border: none;
+    transition: all 0.6s ease;
+    width: 100%;
+}
+
+.analysis-pane-container textarea {
+    height: 150px;
+}
+
+.analysis-pane-container textarea:focus,
+.analysis-pane-container .description-container textarea:focus,
+.analysis-pane-container .notes-container textarea:focus {
+    border-color: var(--hover-color);
+    box-shadow: 0 0 10px var(--hover-color);
+    border: 1px solid var(--text-color);
+    outline: none;
+}
+
+.analysis-pane-container fieldset {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    outline: none;
+    padding: 3px;
+    background-color: var(transparent);
+    border-radius: 4px;
+    margin-bottom: 0.1em;
+    border: none;
+}
+
+.analysis-pane-container .description-container textarea,
+.analysis-pane-container .notes-container textarea {
+    height: 100px;
+}
+
+@media screen and (max-width: 768px) {
+    .analysis-pane-container {
+        align-items: flex-start;
+    }
+
+    .analysis-pane-container button {
+        width: 100%;
+    }
+
+    .analysis-pane-container .description-container textarea,
+    .analysis-pane-container .notes-container textarea {
+        height: 150px;
+    }
+}
