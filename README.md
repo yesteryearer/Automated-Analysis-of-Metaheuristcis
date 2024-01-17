@@ -88,7 +88,7 @@ psql -U [username] -d [databasename]
 \d [tablename]
 ```
 
-To completely reset the database, it is necessary to remove the contents of the `data` directory located within the database directory. This step is crucial particularly after making modifications to the database structure as outlined in `sql.init``. If this action is not taken, `docker compose`` will bypass initialization, owing to the presence of hidden volumes within the data directory.
+To completely reset the database, it is necessary to remove the contents of the `data` directory located within the database directory. This step is crucial particularly after making modifications to the database structure as outlined in `sql.init`. If this action is not taken, `docker compose` will bypass initialization, owing to the presence of hidden volumes within the data directory.
 
 ## Future Development
 **Key Enhancements**
@@ -106,5 +106,5 @@ The upcoming improvements that are essential for future development include:
 - Persistent Data Across Window Changes
     Implement functionality to maintain data continuity even when navigating between different windows or views.
 
-- More Nuaned Database 
+- More Nuanced Database 
     The database currently has some functionality for tracking benchmarks, algorithms, and such but this isn't utilised in the core functionality.
